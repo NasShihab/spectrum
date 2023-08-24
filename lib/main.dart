@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spectrum/screen/homepage.dart';
+import 'package:spectrum/screen/dashboard/dashboard.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/theme_data.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const HomePage(),
+          home: const DashBoard(),
           theme: myThemeData,
         );
       },

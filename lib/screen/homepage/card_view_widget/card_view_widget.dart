@@ -14,37 +14,39 @@ class CardViewWidget extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(cardList.length, (index) {
-          return SizedBox(
-            height: 180.h,
-            width: 150.w,
-            child: Card(
-              elevation: 5,
-              color: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
-                child: Column(
-                  children: [
-                    Image.asset(
-                      // "assets/images/card1.png",
-                      cardList[index].image,
-                      height: 50.h,
-                      width: 50.w,
-                    ),
-                    Text(
-                      cardList[index].title,
-                      style: bodyMedium(context)
-                          ?.copyWith(fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                    height5(),
-                    Text(
-                      cardList[index].text,
-                      style: bodySmall(context)?.copyWith(fontSize: 12.sp),
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 4,
-                    )
-                  ],
+          return Padding(
+            padding: EdgeInsets.only(right: 5.w),
+            child: SizedBox(
+              height: 180.h,
+              width: 150.w,
+              child: Card(
+                elevation: 5,
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        cardList[index].image,
+                        height: 50.h,
+                        width: 50.w,
+                      ),
+                      Text(
+                        cardList[index].title,
+                        style: bodyMedium(context)
+                            ?.copyWith(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                      height5(),
+                      Text(
+                        cardList[index].text,
+                        style: bodySmall(context)?.copyWith(fontSize: 12.sp),
+                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

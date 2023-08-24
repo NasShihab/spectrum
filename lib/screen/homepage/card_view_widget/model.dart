@@ -40,11 +40,6 @@ List<CardViewModel> minCardList = [
     "assets/images/exclusive_solutions/smart_identity.png",
   ),
   CardViewModel(
-    'ERP',
-    'Our ERPSPECTRA is an intelligent ERP system designed',
-    "assets/images/exclusive_solutions/erp.png",
-  ),
-  CardViewModel(
     'Healthcare',
     'Our purpose is health for all. Our eHealth Solutions',
     "assets/images/exclusive_solutions/healthcare.png",
@@ -63,6 +58,11 @@ List<CardViewModel> minCardList = [
     'e-Library',
     'we are provided best library support',
     "assets/images/exclusive_solutions/e_library.png",
+  ),
+  CardViewModel(
+    'ERP',
+    'Our ERPSPECTRA is an intelligent ERP system designed',
+    "assets/images/exclusive_solutions/erp.png",
   ),
   CardViewModel(
     'e-Commerce',
