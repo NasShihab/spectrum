@@ -9,21 +9,26 @@ class MyNavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NavigationDrawer(
-      backgroundColor: Color(0xff90e0ef),
+      backgroundColor: Color(0xff86bbd8),
       children: [
         height20(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/logo.png',
-              height: 30.h,
-              fit: BoxFit.cover,
+            Container(
+              width: 200.w,
+              decoration: BoxDecoration(color: Colors.white),
+              child: Image.asset(
+                'assets/images/logo.png',
+                height: 30.h,
+                fit: BoxFit.cover,
+              ),
             ),
           ],
         ),
         height10(),
         ExpansionTile(
+          backgroundColor: Colors.white,
           title: Text(
             'Solutions',
             style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
