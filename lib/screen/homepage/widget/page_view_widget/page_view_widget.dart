@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/height_width.dart';
-import '../../../core/text_theme.dart';
+import '../../../../core/height_width.dart';
+import '../../../../core/text_theme.dart';
 
 class PosterView extends StatelessWidget {
   const PosterView({super.key});

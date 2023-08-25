@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spectrum/core/height_width.dart';
 import 'package:spectrum/core/text_theme.dart';
-import 'package:spectrum/screen/homepage/card_view_widget/model.dart';
+import 'package:spectrum/screen/homepage/widget/card_view_widget/model.dart';
 
 class ExclusiveSolutions extends StatelessWidget {
   const ExclusiveSolutions({super.key});
@@ -16,6 +16,7 @@ class ExclusiveSolutions extends StatelessWidget {
           return Padding(
             padding: EdgeInsets.only(right: 5.w),
             child: Card(
+              color: Color(0xffcbf3f0),
               elevation: 5,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),

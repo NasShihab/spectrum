@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spectrum/core/height_width.dart';
 import 'package:spectrum/core/text_theme.dart';
-import 'package:spectrum/screen/homepage/card_view_widget/card_view_widget.dart';
-import 'package:spectrum/screen/homepage/page_view_widget/page_view_widget.dart';
-import 'package:spectrum/screen/homepage/navigation_drawer.dart';
+import 'package:spectrum/screen/homepage/widget/card_view_widget/card_view_widget.dart';
+import 'package:spectrum/screen/homepage/widget/page_view_widget/page_view_widget.dart';
+import 'package:spectrum/screen/homepage/widget/navigation_drawer/navigation_drawer.dart';
 
-import 'exclusive_solutions/exclusive_solutions.dart';
+import 'widget/exclusive_solutions/exclusive_solutions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,12 +15,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Spectrum', style: bodyLarge(context),),
+        title: Text(
+          'Spectrum',
+          style: bodyLarge(context),
+        ),
         backgroundColor: Colors.white,
         elevation: 5,
         centerTitle: false,
         actions: [
-          Icon(Icons.login, size: 20.sp,),
+          Icon(
+            Icons.login,
+            size: 20.sp,
+          ),
           width10(),
         ],
       ),
@@ -80,43 +86,53 @@ class HomePage extends StatelessWidget {
                           height20(),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '14\nProject\nComplete',
-                                style: bodyMedium(context)?.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                                textAlign: TextAlign.center,
-                              ),
-                              Text(
-                                '42 \n Happy\n Clients',
-                                style: bodyMedium(context)?.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                                textAlign: TextAlign.center,
-                              ),
-                              Text(
-                                '8 \n Business \n Partners',
-                                style: bodyMedium(context)?.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                                textAlign: TextAlign.center,
-                              ),
-                              Text(
-                                '7 \n It \n Consultant',
-                                style: bodyMedium(context)?.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
+                            children: List.generate(
+                              consultancyList.length,
+                              (index) {
+                                return Container(
+                                  width: 70.w,
+                                  height: 70.h,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15.r),
+                                    gradient: const LinearGradient(
+                                      colors: [
+                                        Color(0xff08a045),
+                                        Color(0xff09bc8a)
+                                      ],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        consultancyList[index].count,
+                                        style: titleLarge(context)?.copyWith(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.yellow),
+                                      ),
+                                      Text(
+                                        consultancyList[index].text,
+                                        style: bodySmall(context)?.copyWith(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.sp),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            ),
                           ),
                         ],
                       ),
                     )
                   ],
                 ),
-
                 height20(),
               ],
             ),
@@ -126,3 +142,19 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+class ConsultancyModel {
+  final String count;
+  final String text;
+  ConsultancyModel({
+    required this.count,
+    required this.text,
+  });
+}
+
+List<ConsultancyModel> consultancyList = [
+  ConsultancyModel(count: '14', text: 'Project\nComplete'),
+  ConsultancyModel(count: '42', text: 'Happy\nClients'),
+  ConsultancyModel(count: '8', text: 'Business\nPartners'),
+  ConsultancyModel(count: '7', text: 'IT\nConsultant'),
+];

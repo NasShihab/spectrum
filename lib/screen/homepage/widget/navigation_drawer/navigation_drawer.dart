@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spectrum/core/height_width.dart';
-import '../../core/text_theme.dart';
+import '../../../../core/text_theme.dart';
 
 class MyNavigationDrawer extends StatelessWidget {
   const MyNavigationDrawer({super.key});
@@ -9,6 +9,7 @@ class MyNavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NavigationDrawer(
+      backgroundColor: Color(0xff90e0ef),
       children: [
         height20(),
         Row(
@@ -25,7 +26,7 @@ class MyNavigationDrawer extends StatelessWidget {
         ExpansionTile(
           title: Text(
             'Solutions',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           children: [
             Column(
@@ -34,13 +35,14 @@ class MyNavigationDrawer extends StatelessWidget {
                 ListTile(
                   leading: Text(
                     'Biometric Technology',
-                    style: bodyMedium(context),
+                    style: bodySmall(context),
                   ),
+                  onTap: () {},
                 ),
                 ListTile(
                   leading: Text(
                     'Digital Identity & Security',
-                    style: bodyMedium(context),
+                    style: bodySmall(context),
                   ),
                 ),
               ],
@@ -50,35 +52,35 @@ class MyNavigationDrawer extends StatelessWidget {
         ListTile(
           title: Text(
             'Service',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           onTap: () {},
         ),
         ListTile(
           title: Text(
             'Products',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           onTap: () {},
         ),
         ListTile(
           title: Text(
             'Showcase',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           onTap: () {},
         ),
         ListTile(
           title: Text(
             'Company',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           onTap: () {},
         ),
         ExpansionTile(
           title: Text(
             'Contact',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           children: [
             Padding(
@@ -151,7 +153,7 @@ class MyNavigationDrawer extends StatelessWidget {
         ExpansionTile(
           title: Text(
             'About Us',
-            style: bodyLarge(context)?.copyWith(fontWeight: FontWeight.bold),
+            style: bodySmall(context)?.copyWith(fontWeight: FontWeight.bold),
           ),
           children: [
             Padding(

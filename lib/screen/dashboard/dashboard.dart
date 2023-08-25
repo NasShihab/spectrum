@@ -41,12 +41,12 @@ class _DashBoardState extends State<DashBoard> {
         child: pageList.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-
+        elevation: 5,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.blue,
+            backgroundColor: Color(0xff006989),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
@@ -54,8 +54,8 @@ class _DashBoardState extends State<DashBoard> {
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.chat_bubble_outlined),
+            label: 'chat',
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(

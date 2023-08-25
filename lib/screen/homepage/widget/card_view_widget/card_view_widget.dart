@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spectrum/core/height_width.dart';
-import 'package:spectrum/screen/homepage/card_view_widget/model.dart';
+import 'package:spectrum/screen/homepage/widget/card_view_widget/model.dart';
 
-import '../../../core/text_theme.dart';
+import '../../../../core/text_theme.dart';
 
 class CardViewWidget extends StatelessWidget {
   const CardViewWidget({super.key});
@@ -21,7 +21,7 @@ class CardViewWidget extends StatelessWidget {
               width: 150.w,
               child: Card(
                 elevation: 5,
-                color: Colors.white,
+                color: Color(0xffcbf3f0),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
                   child: Column(
